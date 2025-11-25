@@ -1,0 +1,162 @@
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ------------------- Página 1 ------------------- */
+#page1 {
+  height: 100vh;
+  background-image: url('https://i.imgur.com/IwPrYvk.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* botón al final */
+  align-items: center;
+}
+
+#start-btn {
+  padding: 20px 60px;
+  font-size: 1.8rem;
+  color: #000;
+  background-color: #89CFF0; /* azul bebé */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#start-btn:hover {
+  transform: scale(1.05);
+  background-color: #6fbce6;
+}
+
+/* ------------------- Página 2 ------------------- */
+#page2 {
+  display: none;
+  background-color: #000; /* fondo completamente negro */
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  position: relative; /* para posicionar botón regresar */
+  padding-top: 20px;
+}
+
+/* Banner superior mostrando solo la parte superior */
+.banner {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Cadáver exquisito 2:3 */
+.cadaver-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+}
+
+.image-column img {
+  width: 100%;
+  height: 33.33%;
+  object-fit: cover;
+  border: 1px solid #555;
+}
+
+/* Inputs numéricos */
+.inputs-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 80px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+/* Botón regresar */
+#back-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #89CFF0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#back-btn:hover {
+  transform: scale(1.05);
+  background-color: #6fbce6;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 1024px) {
+  .image-column {
+    width: 180px;
+    height: 270px;
+  }
+  #start-btn {
+    padding: 18px 50px;
+    font-size: 1.6rem;
+  }
+  input[type="number"] {
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-column {
+    width: 150px;
+    height: 225px;
+  }
+  #start-btn {
+    padding: 15px 45px;
+    font-size: 1.4rem;
+  }
+  input[type="number"] {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-column {
+    width: 120px;
+    height: 180px;
+  }
+  #start-btn {
+    padding: 12px 35px;
+    font-size: 1.2rem;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+}
